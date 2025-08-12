@@ -1,0 +1,26 @@
+blue #1F2B8F
+dark #0D0D0D
+yellow #FFD700
+
+right phone     transform: perspective(1500px) rotateY(25deg) translateX(70px) translateZ(-100px);
+                filter: grayscale(60%);
+
+left phone      transform: perspective(1500px) rotateY(-25deg) translateX(-70px) translateZ(-100px);
+                filter: grayscale(60%);
+
+const SliderrList = {
+  items: ['a','b','c','d','e','f','g'],  // creates an array of 7 elements, all set to 4
+
+  get(index) {
+    const size = this.items.length;
+    // Normalize the index using modulus and handle negative numbers
+    const normalizedIndex = ((index % size) + size) % size;
+    return this.items[normalizedIndex];
+  }
+};
+
+left    transform: perspective(10000px) rotateY(-65deg) translateX(-750px) translateZ(-150px) scale(0.8); 
+
+right   transform: perspective(10000px) rotateY(65deg) translateX(750px) translateZ(-150px) scale(0.8);
+
+perspective(1500px) rotateY(35deg) translateX(200%) translateZ(-100px) scale(0.8)
